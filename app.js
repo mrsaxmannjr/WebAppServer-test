@@ -3,8 +3,8 @@ const cors = require("cors");
 const app = express();
 const bodyParser = require("body-parser");
 const data = require("./Data/data");
-const bios = data.bios
-const stats = data.stats
+const bios = data.bios;
+const stats = data.stats;
 var result = [];
 
 function combine(data1, data2) {
@@ -12,15 +12,17 @@ function combine(data1, data2) {
     result.push(data1[i]);
     for (var j = 0; j < data2.length; j++) {
       if (result[i].name === data2[j].name) {
-        result[i].strength = data2[j].strength
-        result[i].specialMoves = data2[j].specialMoves
-        result[i].combos = data2[j].combos
+        result[i].Power = data2[j].Power;
+        result[i].Speed = data2[j].Speed;
+        result[i].Technique = data2[j].Technique;
+        result[i].Reach = data2[j].Reach;
+        result[i].Energy = data2[j].Energy;
+        result[i]["Ease of use"] = data2[j]["Ease of use"];
       }
     }
   }
 }
 combine(bios, stats);
-
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -34,5 +36,5 @@ app.post("/", (request, response) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log('listening on port 3000');
+  console.log("listening on port 3000");
 });

@@ -1,32 +1,34 @@
 var bios = [
   {
     name: "Goku",
-    race: "Saiyan"
+    race: "Saiyan",
+    bio: "The all-rounder anyone can use!"
   },
   {
     name: "Vegeta",
-    race: "Saiyan"
+    race: "Saiyan",
+    bio: "A balanced fighter with good offensive and defensive capabilities"
   }
 ];
 
 var stats = [
   {
     name: "Goku",
-    strength: 9,
-    specialMoves: [],
-    combos: []
+    Power: "S",
+    Speed: "B",
+    Technique: "A",
+    Reach: "A",
+    Energy: "A",
+    "Ease of use": "SS",
   },
   {
     name: "Vegeta",
-    strength: 10,
-    specialMoves: [],
-    combos: []
-  },
-  {
-    name: "Krillin",
-    strength: 5,
-    specialMoves: [],
-    combos: []
+    Power: "A",
+    Speed: "A",
+    Technique: "B",
+    Reach: "A",
+    Energy: "S",
+    "Ease of use": "SS",
   }
 ];
 
